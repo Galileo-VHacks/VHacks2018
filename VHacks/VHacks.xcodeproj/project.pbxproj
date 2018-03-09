@@ -16,10 +16,11 @@
 		8574B6E92052B08800EE9598 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574B6E82052B08800EE9598 /* LocationDetailViewController.swift */; };
 		A51F0B342052A0B800502E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51F0B332052A0B800502E86 /* AppDelegate.swift */; };
 		A51F0B392052A0B800502E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B372052A0B800502E86 /* Main.storyboard */; };
-		A51F0B3B2052A0B800502E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B3A2052A0B800502E86 /* Assets.xcassets */; };
+		A51F0B3B2052A0B800502E86 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B3A2052A0B800502E86 /* assets.xcassets */; };
 		A51F0B3E2052A0B800502E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B3C2052A0B800502E86 /* LaunchScreen.storyboard */; };
 		A52E14F82052EE8300850C66 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E14F72052EE8300850C66 /* ScanViewController.swift */; };
 		A52E14FA2052FDCD00850C66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E14F92052FDCD00850C66 /* User.swift */; };
+		A52E14FC20532FD100850C66 /* OrgLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E14FB20532FD100850C66 /* OrgLoginViewController.swift */; };
 		A5A1B57B2052B5C2009CDEE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1B57A2052B5C2009CDEE2 /* LoginViewController.swift */; };
 		A5A1B57D2052BA41009CDEE2 /* OrgSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1B57C2052BA41009CDEE2 /* OrgSignupViewController.swift */; };
 /* End PBXBuildFile section */
@@ -35,11 +36,12 @@
 		A51F0B302052A0B800502E86 /* VHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51F0B332052A0B800502E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51F0B382052A0B800502E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A51F0B3A2052A0B800502E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A51F0B3A2052A0B800502E86 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		A51F0B3D2052A0B800502E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A51F0B3F2052A0B900502E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A52E14F72052EE8300850C66 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		A52E14F92052FDCD00850C66 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A52E14FB20532FD100850C66 /* OrgLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgLoginViewController.swift; sourceTree = "<group>"; };
 		A5A1B57A2052B5C2009CDEE2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5A1B57C2052BA41009CDEE2 /* OrgSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgSignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,9 +82,10 @@
 				A52E14F92052FDCD00850C66 /* User.swift */,
 				A51F0B332052A0B800502E86 /* AppDelegate.swift */,
 				A51F0B372052A0B800502E86 /* Main.storyboard */,
+				A52E14FB20532FD100850C66 /* OrgLoginViewController.swift */,
 				852C846420530DAE00E796F8 /* IntecoinDetailViewController.swift */,
 				A5A1B57C2052BA41009CDEE2 /* OrgSignupViewController.swift */,
-				A51F0B3A2052A0B800502E86 /* Assets.xcassets */,
+				A51F0B3A2052A0B800502E86 /* assets.xcassets */,
 				A51F0B3C2052A0B800502E86 /* LaunchScreen.storyboard */,
 				A51F0B3F2052A0B900502E86 /* Info.plist */,
 				8574B6E42052AE3900EE9598 /* UserViewController.swift */,
@@ -156,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A51F0B3E2052A0B800502E86 /* LaunchScreen.storyboard in Resources */,
-				A51F0B3B2052A0B800502E86 /* Assets.xcassets in Resources */,
+				A51F0B3B2052A0B800502E86 /* assets.xcassets in Resources */,
 				A51F0B392052A0B800502E86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +198,7 @@
 				852C8463205306D800E796F8 /* IntecoinViewController.swift in Sources */,
 				852C845F2052C23F00E796F8 /* Location.swift in Sources */,
 				852C846520530DAE00E796F8 /* IntecoinDetailViewController.swift in Sources */,
+				A52E14FC20532FD100850C66 /* OrgLoginViewController.swift in Sources */,
 				8574B6E52052AE3900EE9598 /* UserViewController.swift in Sources */,
 				A52E14FA2052FDCD00850C66 /* User.swift in Sources */,
 				A52E14F82052EE8300850C66 /* ScanViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  OrgLoginViewController.swift
 //  VHacks
 //
 //  Created by Abha Vedula on 3/9/18.
@@ -8,13 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-    
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    
-    var username: String!
-    var password: String!
+class OrgLoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +21,6 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loginUser(_ sender: Any) {
-        
-    }
 
     /*
     // MARK: - Navigation

@@ -20,7 +20,7 @@ class OrgSignupViewController: UIViewController, UISearchBarDelegate, UIPickerVi
     var pointAnnotation:MKPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
     
-    var pickerDataSource = ["Shelter", "Food", "Health", "Clothing"];
+    var pickerDataSource = ["Shelter", "Pantry", "Workshop", "Careers", "Health"];
     var type = "Shelter"
     
     @IBOutlet weak var typePicker: UIPickerView!
