@@ -41,7 +41,6 @@ class Location {
     func view() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "LocationDetailViewController") as! LocationDetailViewController
-        controller.modalPresentationStyle = .fullScreen
         controller.location = self
         return controller
     }

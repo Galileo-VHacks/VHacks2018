@@ -48,7 +48,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let pin = view.annotation as! MyPin
         if let l = pin.loc {
             let vc = l.view()
-            present(vc, animated: true, completion: nil)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     
