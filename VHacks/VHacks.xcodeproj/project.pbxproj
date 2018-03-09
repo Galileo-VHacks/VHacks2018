@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8574B6E52052AE3900EE9598 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574B6E42052AE3900EE9598 /* UserViewController.swift */; };
 		8574B6E72052AE4400EE9598 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574B6E62052AE4400EE9598 /* MapViewController.swift */; };
+		8574B6E92052B08800EE9598 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574B6E82052B08800EE9598 /* LocationDetailViewController.swift */; };
 		A51F0B342052A0B800502E86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51F0B332052A0B800502E86 /* AppDelegate.swift */; };
 		A51F0B392052A0B800502E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B372052A0B800502E86 /* Main.storyboard */; };
 		A51F0B3B2052A0B800502E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B3A2052A0B800502E86 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		8574B6E42052AE3900EE9598 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8574B6E62052AE4400EE9598 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8574B6E82052B08800EE9598 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		A51F0B302052A0B800502E86 /* VHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51F0B332052A0B800502E86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A51F0B382052A0B800502E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A51F0B3F2052A0B900502E86 /* Info.plist */,
 				8574B6E42052AE3900EE9598 /* UserViewController.swift */,
 				8574B6E62052AE4400EE9598 /* MapViewController.swift */,
+				8574B6E82052B08800EE9598 /* LocationDetailViewController.swift */,
 			);
 			path = VHacks;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8574B6E92052B08800EE9598 /* LocationDetailViewController.swift in Sources */,
 				A51F0B342052A0B800502E86 /* AppDelegate.swift in Sources */,
 				8574B6E72052AE4400EE9598 /* MapViewController.swift in Sources */,
 				8574B6E52052AE3900EE9598 /* UserViewController.swift in Sources */,
