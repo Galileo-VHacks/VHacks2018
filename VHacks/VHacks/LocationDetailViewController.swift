@@ -15,6 +15,7 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var costLabel: UILabel!
     
     var location: Location?
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,12 @@ class LocationDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func checkIn(_ sender: Any) {
+        // PAY
+        //user.pay(l.cost)
+        
     }
     
     @IBAction func goBack(_ sender: Any) {

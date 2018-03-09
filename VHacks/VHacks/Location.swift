@@ -15,11 +15,13 @@ class Location {
     let type: String
     var address: String?
     var cost: String?
+    var checkins: [User]
     
     init(location: CLLocationCoordinate2D, title: String, type: String) {
         self.location = location
         self.title = title
         self.type = type
+        self.checkins = []
     }
     
     func annotation() -> MKAnnotation {
