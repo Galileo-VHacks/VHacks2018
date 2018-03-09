@@ -17,6 +17,7 @@
 		A51F0B3B2052A0B800502E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B3A2052A0B800502E86 /* Assets.xcassets */; };
 		A51F0B3E2052A0B800502E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B3C2052A0B800502E86 /* LaunchScreen.storyboard */; };
 		A52E14F82052EE8300850C66 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E14F72052EE8300850C66 /* ScanViewController.swift */; };
+		A52E14FA2052FDCD00850C66 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E14F92052FDCD00850C66 /* User.swift */; };
 		A5A1B57B2052B5C2009CDEE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1B57A2052B5C2009CDEE2 /* LoginViewController.swift */; };
 		A5A1B57D2052BA41009CDEE2 /* OrgSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1B57C2052BA41009CDEE2 /* OrgSignupViewController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		A51F0B3D2052A0B800502E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A51F0B3F2052A0B900502E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A52E14F72052EE8300850C66 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		A52E14F92052FDCD00850C66 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A5A1B57A2052B5C2009CDEE2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5A1B57C2052BA41009CDEE2 /* OrgSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgSignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 				852C84602052E22E00E796F8 /* UserMenuViewController.swift */,
 				A5A1B57A2052B5C2009CDEE2 /* LoginViewController.swift */,
 				852C845E2052C23F00E796F8 /* Location.swift */,
+				A52E14F92052FDCD00850C66 /* User.swift */,
 				A51F0B332052A0B800502E86 /* AppDelegate.swift */,
 				A51F0B372052A0B800502E86 /* Main.storyboard */,
 				A5A1B57C2052BA41009CDEE2 /* OrgSignupViewController.swift */,
@@ -166,6 +169,7 @@
 				A5A1B57B2052B5C2009CDEE2 /* LoginViewController.swift in Sources */,
 				852C845F2052C23F00E796F8 /* Location.swift in Sources */,
 				8574B6E52052AE3900EE9598 /* UserViewController.swift in Sources */,
+				A52E14FA2052FDCD00850C66 /* User.swift in Sources */,
 				A52E14F82052EE8300850C66 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
