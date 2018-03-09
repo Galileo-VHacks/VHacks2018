@@ -1,5 +1,5 @@
 //
-//  IntecoinViewController.swift
+//  IntecoinDetailViewController.swift
 //  VHacks
 //
 //  Created by Jack Frysinger on 3/9/18.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class IntecoinViewController: UIViewController {
+class IntecoinDetailViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,15 +20,6 @@ class IntecoinViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let s = sender as? UIButton {
-            if let d = segue.destination as? IntecoinDetailViewController {
-                // d.label.text = s.restorationIdentifier
-            }
-        }
-        segue.perform()
     }
     
 
