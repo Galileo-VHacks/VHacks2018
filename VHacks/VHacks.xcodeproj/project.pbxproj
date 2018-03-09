@@ -15,6 +15,7 @@
 		A51F0B3B2052A0B800502E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B3A2052A0B800502E86 /* Assets.xcassets */; };
 		A51F0B3E2052A0B800502E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51F0B3C2052A0B800502E86 /* LaunchScreen.storyboard */; };
 		A5A1B57B2052B5C2009CDEE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1B57A2052B5C2009CDEE2 /* LoginViewController.swift */; };
+		A5A1B57D2052BA41009CDEE2 /* OrgSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1B57C2052BA41009CDEE2 /* OrgSignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A51F0B3D2052A0B800502E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A51F0B3F2052A0B900502E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5A1B57A2052B5C2009CDEE2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A5A1B57C2052BA41009CDEE2 /* OrgSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrgSignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A5A1B57A2052B5C2009CDEE2 /* LoginViewController.swift */,
 				A51F0B332052A0B800502E86 /* AppDelegate.swift */,
 				A51F0B372052A0B800502E86 /* Main.storyboard */,
+				A5A1B57C2052BA41009CDEE2 /* OrgSignupViewController.swift */,
 				A51F0B3A2052A0B800502E86 /* Assets.xcassets */,
 				A51F0B3C2052A0B800502E86 /* LaunchScreen.storyboard */,
 				A51F0B3F2052A0B900502E86 /* Info.plist */,
@@ -149,6 +152,7 @@
 				8574B6E92052B08800EE9598 /* LocationDetailViewController.swift in Sources */,
 				A51F0B342052A0B800502E86 /* AppDelegate.swift in Sources */,
 				8574B6E72052AE4400EE9598 /* MapViewController.swift in Sources */,
+				A5A1B57D2052BA41009CDEE2 /* OrgSignupViewController.swift in Sources */,
 				A5A1B57B2052B5C2009CDEE2 /* LoginViewController.swift in Sources */,
 				8574B6E52052AE3900EE9598 /* UserViewController.swift in Sources */,
 			);
