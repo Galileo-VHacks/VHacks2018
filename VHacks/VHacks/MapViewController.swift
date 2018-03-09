@@ -17,10 +17,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
         // Do any additional setup after loading the view.
         mapView.delegate = self
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 41.902191, longitude: 12.461055)
-        annotation.title = "Place"
-        mapView.addAnnotation(annotation)
+        let loc = Location(location: CLLocationCoordinate2D(latitude: 41.902191, longitude: 12.461055), title: "Place", type: "thing")
+        loc.address = "this address"
+        loc.cost = "this cost"
+        mapView.addAnnotation(loc.annotation())
+        
+        let loc2 = Location(location: CLLocationCoordinate2D(latitude: 41.302191, longitude: 12.061055), title: "the other place", type: "other type")
+        loc2.address = "address2"
+        loc2.cost = "cost2"
+        mapView.addAnnotation(loc2.annotation())
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,19 +36,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     let location = CLLocation(latitude: 41.902191, longitude: 12.461055)
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pinView")
-        view.annotation = annotation
-        view.canShowCallout = true
-        view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-//        view.detailCalloutAccessoryView = controller.view
-        return view
+        let ann = annotation as! MyPin
+        if let l = ann.loc {
+            return l.annotationView()
+        }
+        
+        return nil
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LocationDetailViewController")
-        controller.modalPresentationStyle = .fullScreen
-        present(controller, animated: true, completion: nil)
+        let pin = view.annotation as! MyPin
+        if let l = pin.loc {
+            let vc = l.view()
+            present(vc, animated: true, completion: nil)
+        }
     }
     
     /*

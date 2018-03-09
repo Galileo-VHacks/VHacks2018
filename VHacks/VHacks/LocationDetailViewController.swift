@@ -13,9 +13,17 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
+    
+    var location: Location?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let l = location {
+            nameLabel.text = l.title
+            addressLabel.text = l.address
+            costLabel.text = l.cost
+        }
         // Do any additional setup after loading the view.
     }
 
