@@ -124,7 +124,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zGt-x8-E1K">
-                                <rect key="frame" x="65" y="476" width="198" height="127"/>
+                                <rect key="frame" x="93" y="441" width="189" height="127"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
@@ -143,6 +143,7 @@
                         <outlet property="addressField" destination="INf-p9-Tfz" id="NQi-ID-B0C"/>
                         <outlet property="mapView" destination="nIM-5Q-sN7" id="PHR-2G-Mtv"/>
                         <outlet property="nameField" destination="X1f-Ut-jdL" id="AbM-xn-Yz6"/>
+                        <outlet property="typePicker" destination="zGt-x8-E1K" id="51R-re-56m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vqx-z7-h4S" userLabel="First Responder" sceneMemberID="firstResponder"/>

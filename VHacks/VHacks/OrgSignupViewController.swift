@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class OrgSignupViewController: UIViewController, UISearchBarDelegate {
+class OrgSignupViewController: UIViewController, UISearchBarDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var searchController:UISearchController!
     var annotation:MKAnnotation!
@@ -20,9 +20,13 @@ class OrgSignupViewController: UIViewController, UISearchBarDelegate {
     var pointAnnotation:MKPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
     
+    var pickerDataSource = ["Shelter", "Food", "Health", "Clothing"];
+    var type = "Shelter"
     
+    @IBOutlet weak var typePicker: UIPickerView!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var addressField: UITextField!
+    
 
     @IBAction func showSearchBar(_ sender: Any) {
         searchController = UISearchController(searchResultsController: nil)
@@ -120,17 +124,37 @@ class OrgSignupViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.typePicker.dataSource = self;
+        self.typePicker.delegate = self;
+        
+      
 
         // Do any additional setup after loading the view.
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerDataSource.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.type = pickerDataSource[row]
+        print (self.type)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
+  
 
     /*
     // MARK: - Navigation
