@@ -288,7 +288,7 @@
 				DEVELOPMENT_TEAM = Q6ETBD25S7;
 				INFOPLIST_FILE = VHacks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = VHacks.VHacks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackfrysinger.Intemate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -301,7 +301,7 @@
 				DEVELOPMENT_TEAM = Q6ETBD25S7;
 				INFOPLIST_FILE = VHacks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = VHacks.VHacks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jackfrysinger.Intemate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
