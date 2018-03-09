@@ -173,8 +173,8 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/VHacks/VHacks/Carthage/Build/iOS/SwiftyJSON.framework",
-				"$(SRCROOT)/VHacks/VHacks/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/VHacks/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/VHacks/Carthage/Build/iOS/Alamofire.framework",
 			);
 			outputPaths = (
 			);
