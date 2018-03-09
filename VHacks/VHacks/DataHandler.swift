@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class DataHandler {
     let session = URLSession.shared
-    let host = "localhost:8000"
+    let host = "192.168.200.247"
     
     let paths = ["login": "/api/user/login", "register": "/api/user/register", "logout": "/api/user/logout", "activityList": "/api/activity"]
     let methods : [String : HTTPMethod] = ["login": .post, "register": .post, "logout": .get, "activityList": .get]
@@ -20,6 +20,8 @@ class DataHandler {
     func callBody(api: String, parameters: Parameters, callback: @escaping (DataResponse<Any>) -> Void) {
         var url = URLComponents()
         url.host = host
+        url.port = 8000
+        url.scheme = "http"
         url.path = paths[api]!
         Alamofire.request(url, method: methods[api]!, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: callback)
     }

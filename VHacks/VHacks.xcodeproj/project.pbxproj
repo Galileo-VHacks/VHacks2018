@@ -11,6 +11,9 @@
 		852C84612052E22E00E796F8 /* UserMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C84602052E22E00E796F8 /* UserMenuViewController.swift */; };
 		852C8463205306D800E796F8 /* IntecoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C8462205306D800E796F8 /* IntecoinViewController.swift */; };
 		852C846520530DAE00E796F8 /* IntecoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C846420530DAE00E796F8 /* IntecoinDetailViewController.swift */; };
+		852C84752053479400E796F8 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C84742053479400E796F8 /* DataHandler.swift */; };
+		852C8479205347B400E796F8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852C8477205347B400E796F8 /* Alamofire.framework */; };
+		852C847A205347B400E796F8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852C8478205347B400E796F8 /* SwiftyJSON.framework */; };
 		8574B6E52052AE3900EE9598 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574B6E42052AE3900EE9598 /* UserViewController.swift */; };
 		8574B6E72052AE4400EE9598 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574B6E62052AE4400EE9598 /* MapViewController.swift */; };
 		8574B6E92052B08800EE9598 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8574B6E82052B08800EE9598 /* LocationDetailViewController.swift */; };
@@ -30,6 +33,9 @@
 		852C84602052E22E00E796F8 /* UserMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuViewController.swift; sourceTree = "<group>"; };
 		852C8462205306D800E796F8 /* IntecoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntecoinViewController.swift; sourceTree = "<group>"; };
 		852C846420530DAE00E796F8 /* IntecoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntecoinDetailViewController.swift; sourceTree = "<group>"; };
+		852C84742053479400E796F8 /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		852C8477205347B400E796F8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = VHacks/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		852C8478205347B400E796F8 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = VHacks/Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		8574B6E42052AE3900EE9598 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8574B6E62052AE4400EE9598 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8574B6E82052B08800EE9598 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
@@ -51,17 +57,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852C8479205347B400E796F8 /* Alamofire.framework in Frameworks */,
+				852C847A205347B400E796F8 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		852C8476205347B300E796F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				852C8477205347B400E796F8 /* Alamofire.framework */,
+				852C8478205347B400E796F8 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A51F0B272052A0B700502E86 = {
 			isa = PBXGroup;
 			children = (
 				A51F0B322052A0B800502E86 /* VHacks */,
 				A51F0B312052A0B800502E86 /* Products */,
+				852C8476205347B300E796F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +94,7 @@
 		A51F0B322052A0B800502E86 /* VHacks */ = {
 			isa = PBXGroup;
 			children = (
+				852C84742053479400E796F8 /* DataHandler.swift */,
 				852C84602052E22E00E796F8 /* UserMenuViewController.swift */,
 				A5A1B57A2052B5C2009CDEE2 /* LoginViewController.swift */,
 				852C845E2052C23F00E796F8 /* Location.swift */,
@@ -197,6 +216,7 @@
 				A5A1B57B2052B5C2009CDEE2 /* LoginViewController.swift in Sources */,
 				852C8463205306D800E796F8 /* IntecoinViewController.swift in Sources */,
 				852C845F2052C23F00E796F8 /* Location.swift in Sources */,
+				852C84752053479400E796F8 /* DataHandler.swift in Sources */,
 				852C846520530DAE00E796F8 /* IntecoinDetailViewController.swift in Sources */,
 				A52E14FC20532FD100850C66 /* OrgLoginViewController.swift in Sources */,
 				8574B6E52052AE3900EE9598 /* UserViewController.swift in Sources */,
@@ -325,6 +345,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q6ETBD25S7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VHacks/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VHacks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jackfrysinger.Intemate;
@@ -338,6 +362,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q6ETBD25S7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VHacks/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VHacks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jackfrysinger.Intemate;
