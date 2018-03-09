@@ -9,13 +9,18 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        mapView.delegate = self
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 41.902191, longitude: 12.461055)
+        annotation.title = "Place"
+        mapView.addAnnotation(annotation)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +28,24 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    let location = CLLocation(latitude: 41.902191, longitude: 12.461055)
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pinView")
+        view.annotation = annotation
+        view.canShowCallout = true
+        view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+//        view.detailCalloutAccessoryView = controller.view
+        return view
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LocationDetailViewController")
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
