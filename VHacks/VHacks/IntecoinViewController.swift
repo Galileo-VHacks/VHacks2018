@@ -1,5 +1,5 @@
 //
-//  UserMenuViewController.swift
+//  IntecoinViewController.swift
 //  VHacks
 //
 //  Created by Jack Frysinger on 3/9/18.
@@ -8,21 +8,12 @@
 
 import UIKit
 
-class UserMenuViewController: UIViewController {
+class IntecoinViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.isNavigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
