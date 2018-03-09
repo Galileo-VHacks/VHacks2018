@@ -263,8 +263,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ThM-SU-evC">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-PG-mFj">
-                                <rect key="frame" x="87" y="348" width="201" height="44"/>
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyf-PG-mFj">
+                                <rect key="frame" x="87" y="353" width="201" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Ywm-1x-ZUX"/>
+                                </constraints>
                                 <state key="normal" title="User" backgroundImage="btn">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -274,9 +277,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlc-MS-NhW">
                                 <rect key="frame" x="88" y="407" width="200" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="idi-fu-DLa"/>
-                                </constraints>
                                 <state key="normal" title="Organization" backgroundImage="btn">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -287,16 +287,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ThM-SU-evC" firstAttribute="bottom" secondItem="1tD-zf-mfF" secondAttribute="top" id="2G6-Fp-uA0"/>
-                            <constraint firstItem="1tD-zf-mfF" firstAttribute="top" secondItem="Dlc-MS-NhW" secondAttribute="bottom" constant="220" id="2RQ-5K-B8J"/>
-                            <constraint firstItem="Fyf-PG-mFj" firstAttribute="trailing" secondItem="Dlc-MS-NhW" secondAttribute="trailing" id="FHY-vN-lcC"/>
-                            <constraint firstAttribute="trailing" secondItem="ThM-SU-evC" secondAttribute="trailing" id="Lsc-ko-ggP"/>
-                            <constraint firstItem="Fyf-PG-mFj" firstAttribute="top" secondItem="EnX-5T-xcK" secondAttribute="bottom" constant="284" id="QPn-QG-4At"/>
-                            <constraint firstItem="ThM-SU-evC" firstAttribute="leading" secondItem="Se7-pR-CdG" secondAttribute="leading" id="Z84-oN-zEX"/>
-                            <constraint firstItem="ThM-SU-evC" firstAttribute="centerX" secondItem="Fyf-PG-mFj" secondAttribute="centerX" id="a2E-fB-PTO"/>
-                            <constraint firstItem="Fyf-PG-mFj" firstAttribute="centerX" secondItem="Dlc-MS-NhW" secondAttribute="centerX" id="aIJ-tC-h65"/>
-                            <constraint firstItem="ThM-SU-evC" firstAttribute="top" secondItem="EnX-5T-xcK" secondAttribute="bottom" id="gBt-ER-6mn"/>
-                            <constraint firstItem="Dlc-MS-NhW" firstAttribute="top" secondItem="Fyf-PG-mFj" secondAttribute="bottom" constant="15" id="wsb-X2-cyw"/>
+                            <constraint firstItem="ThM-SU-evC" firstAttribute="top" secondItem="EnX-5T-xcK" secondAttribute="bottom" id="3lY-eB-Mgf"/>
+                            <constraint firstAttribute="trailing" secondItem="ThM-SU-evC" secondAttribute="trailing" id="L3t-6u-zXn"/>
+                            <constraint firstItem="Fyf-PG-mFj" firstAttribute="trailing" secondItem="Dlc-MS-NhW" secondAttribute="trailing" id="LEO-oo-DIY"/>
+                            <constraint firstItem="1tD-zf-mfF" firstAttribute="top" secondItem="Dlc-MS-NhW" secondAttribute="bottom" constant="220" id="Lg3-Oj-Sdl"/>
+                            <constraint firstItem="ThM-SU-evC" firstAttribute="leading" secondItem="Se7-pR-CdG" secondAttribute="leading" id="OPa-sR-ctj"/>
+                            <constraint firstItem="Dlc-MS-NhW" firstAttribute="top" secondItem="Fyf-PG-mFj" secondAttribute="bottom" constant="15" id="OYd-xI-SNr"/>
+                            <constraint firstItem="Fyf-PG-mFj" firstAttribute="centerX" secondItem="Dlc-MS-NhW" secondAttribute="centerX" id="eN0-ck-H58"/>
+                            <constraint firstItem="ThM-SU-evC" firstAttribute="centerX" secondItem="Dlc-MS-NhW" secondAttribute="centerX" id="mRZ-vo-nIp"/>
+                            <constraint firstItem="ThM-SU-evC" firstAttribute="bottom" secondItem="1tD-zf-mfF" secondAttribute="top" id="zRq-XK-fhX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vd0-Kg-5n2"/>
