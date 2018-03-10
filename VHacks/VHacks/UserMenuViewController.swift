@@ -31,6 +31,12 @@ class UserMenuViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let d = segue.destination as? MapViewController {
+            d.type = segue.identifier!
+        }
+    }
+    
     func updateUI() {
         if let b = balance {
             balanceLabel.text = "ITC-ID: \(b)"

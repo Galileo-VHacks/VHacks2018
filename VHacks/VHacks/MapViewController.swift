@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
-    let type = "shelter"
+    var type = "shelter"
 
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
@@ -37,6 +37,18 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 if let d = json?["data"]?.array {
                     for shelter in d {
                         let loc = Location(location: CLLocationCoordinate2D(latitude: shelter["location"].dictionary!["lat"]!.double!, longitude: (shelter["location"].dictionary!["long"]?.double!)!), title: shelter["name"].string!, type: "shelter")
+                        self.mapView.addAnnotation(loc.annotation())
+                    }
+                }
+            }
+        }
+        
+        if type == "pantry" {
+            DataHandler().pantryList {response in
+                let json = JSON(response.data).dictionary
+                if let d = json?["data"]?.array {
+                    for shelter in d {
+                        let loc = Location(location: CLLocationCoordinate2D(latitude: shelter["location"].dictionary!["lat"]!.double!, longitude: (shelter["location"].dictionary!["long"]?.double!)!), title: shelter["name"].string!, type: "pantry")
                         self.mapView.addAnnotation(loc.annotation())
                     }
                 }

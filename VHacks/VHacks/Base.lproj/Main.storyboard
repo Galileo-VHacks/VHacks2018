@@ -379,7 +379,7 @@
                                 <rect key="frame" x="72" y="413" width="240" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xlm-Wc-vdH">
                                 <rect key="frame" x="72" y="375" width="240" height="30"/>
@@ -591,7 +591,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="pantry btn"/>
                                 <connections>
-                                    <segue destination="2ss-BS-I2B" kind="show" id="cWc-Vk-AfX"/>
+                                    <segue destination="2ss-BS-I2B" kind="show" identifier="pantry" id="cOA-pm-iZS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdm-Xg-cPb">
@@ -631,7 +631,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="shelter btn"/>
                                 <connections>
-                                    <segue destination="2ss-BS-I2B" kind="show" id="ENM-BJ-78G"/>
+                                    <segue destination="2ss-BS-I2B" kind="show" identifier="shelter" id="ENM-BJ-78G"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7B-6G-raC">
@@ -926,6 +926,6 @@
         <image name="user btn" width="264" height="264"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cWc-Vk-AfX"/>
+        <segue reference="cOA-pm-iZS"/>
     </inferredMetricsTieBreakers>
 </document>
