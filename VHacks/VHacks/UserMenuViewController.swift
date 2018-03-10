@@ -17,7 +17,7 @@ class UserMenuViewController: UIViewController {
     }
     
     @IBOutlet weak var balanceLabel: UILabel!
-    var balance: Int?
+    var balance: String?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,7 +25,7 @@ class UserMenuViewController: UIViewController {
         DataHandler().user {response in
             let json = JSON(response.data)
             if let d = json["data"].dictionary {
-                self.balance = d["balance"]?.int
+                self.balance = d["wallet"]?.string
             }
             self.performSelector(onMainThread: #selector(self.updateUI), with: nil, waitUntilDone: true)
         }
@@ -33,7 +33,7 @@ class UserMenuViewController: UIViewController {
     
     func updateUI() {
         if let b = balance {
-            balanceLabel.text = "\(b)"
+            balanceLabel.text = "ITC-ID: \(b)"
         }
     }
     
