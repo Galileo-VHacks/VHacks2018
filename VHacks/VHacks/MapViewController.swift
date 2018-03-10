@@ -37,6 +37,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 if let d = json?["data"]?.array {
                     for shelter in d {
                         let loc = Location(location: CLLocationCoordinate2D(latitude: shelter["location"].dictionary!["lat"]!.double!, longitude: (shelter["location"].dictionary!["long"]?.double!)!), title: shelter["name"].string!, type: "shelter")
+                        loc.ref = shelter["reference_code"].string!
                         self.mapView.addAnnotation(loc.annotation())
                     }
                 }
@@ -49,6 +50,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 if let d = json?["data"]?.array {
                     for shelter in d {
                         let loc = Location(location: CLLocationCoordinate2D(latitude: shelter["location"].dictionary!["lat"]!.double!, longitude: (shelter["location"].dictionary!["long"]?.double!)!), title: shelter["name"].string!, type: "pantry")
+                        loc.ref = shelter["reference_code"].string!
                         self.mapView.addAnnotation(loc.annotation())
                     }
                 }

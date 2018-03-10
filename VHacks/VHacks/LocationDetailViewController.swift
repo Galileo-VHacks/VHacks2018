@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class LocationDetailViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class LocationDetailViewController: UIViewController {
     
     var location: Location?
     var user: User?
+    var ref: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class LocationDetailViewController: UIViewController {
             nameLabel.text = l.title
             addressLabel.text = l.address
             costLabel.text = l.cost
+            ref = l.ref
         }
         // Do any additional setup after loading the view.
     }
@@ -36,7 +39,15 @@ class LocationDetailViewController: UIViewController {
     @IBAction func checkIn(_ sender: Any) {
         // PAY
         //user.pay(l.cost)
-        
+        if let r = ref {
+            DataHandler().checkin(wallet: r) {response in
+                if let bal = JSON(response.data).dictionary?["data"]?.dictionary?["balance"]?.int {
+                    let c = UIAlertController(title: "Checkin successful", message: "New balance: \(bal)", preferredStyle: UIAlertControllerStyle.alert)
+                    c.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction) in c.dismiss(animated: true, completion: nil)}))
+                    self.present(c, animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     @IBAction func goBack(_ sender: Any) {

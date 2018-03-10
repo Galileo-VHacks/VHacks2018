@@ -14,8 +14,8 @@ class DataHandler {
     let session = URLSession.shared
     let host = "192.168.200.247"
     
-    let paths = ["login": "/api/user/login", "register": "/api/user/register", "logout": "/api/user/logout", "activityList": "/api/activity", "user": "/api/user", "shelterList": "/api/organization/shelter", "pantryList": "/api/organization/pantry"]
-    let methods : [String : HTTPMethod] = ["login": .post, "register": .post, "logout": .get, "activityList": .get, "user": .get, "shelterList": .get, "pantryList": .get]
+    let paths = ["login": "/api/user/login", "register": "/api/user/register", "logout": "/api/user/logout", "activityList": "/api/activity", "user": "/api/user", "shelterList": "/api/organization/shelter", "pantryList": "/api/organization/pantry", "checkin": "/api/transaction"]
+    let methods : [String : HTTPMethod] = ["login": .post, "register": .post, "logout": .get, "activityList": .get, "user": .get, "shelterList": .get, "pantryList": .get, "checkin": .post]
     
     func callBody(api: String, parameters: Parameters, callback: @escaping (DataResponse<Any>) -> Void) {
         var url = URLComponents()
@@ -61,5 +61,9 @@ class DataHandler {
     
     func pantryList(callback: @escaping (DataResponse<Any>) -> Void) {
         callNoBody(api: "pantryList", callback: callback)
+    }
+    
+    func checkin(wallet: String, callback: @escaping (DataResponse<Any>) -> Void) {
+        callBody(api: "checkin", parameters: ["to": wallet], callback: callback)
     }
 }
