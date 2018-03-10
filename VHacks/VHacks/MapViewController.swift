@@ -38,9 +38,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     for shelter in d {
                         let loc = Location(location: CLLocationCoordinate2D(latitude: shelter["location"].dictionary!["lat"]!.double!, longitude: (shelter["location"].dictionary!["long"]?.double!)!), title: shelter["name"].string!, type: "shelter")
                         loc.ref = shelter["reference_code"].string!
-                        loc.ref = shelter["phone"].string!
-                        loc.ref = shelter["email"].string!
-                        loc.ref = shelter["website"].string!
+                        loc.phone = shelter["phone"].string!
+                        loc.email = shelter["email"].string!
+                        loc.website = shelter["website"].string!
                         self.mapView.addAnnotation(loc.annotation())
                     }
                 }
@@ -54,9 +54,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     for shelter in d {
                         let loc = Location(location: CLLocationCoordinate2D(latitude: shelter["location"].dictionary!["lat"]!.double!, longitude: (shelter["location"].dictionary!["long"]?.double!)!), title: shelter["name"].string!, type: "pantry")
                         loc.ref = shelter["reference_code"].string!
-                        loc.ref = shelter["phone"].string!
-                        loc.ref = shelter["email"].string!
-                        loc.ref = shelter["website"].string!
+                        loc.phone = shelter["phone"].string!
+                        loc.email = shelter["email"].string!
+                        loc.website = shelter["website"].string!
                         self.mapView.addAnnotation(loc.annotation())
                     }
                 }
