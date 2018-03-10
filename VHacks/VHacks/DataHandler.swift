@@ -26,11 +26,28 @@ class DataHandler {
         Alamofire.request(url, method: methods[api]!, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: callback)
     }
     
+    func callNoBody(api: String, callback: @escaping (DataResponse<Any>) -> Void) {
+        var url = URLComponents()
+        url.host = host
+        url.port = 8000
+        url.scheme = "http"
+        url.path = paths[api]!
+        Alamofire.request(url, method: methods[api]!).responseJSON(completionHandler: callback)
+    }
+    
     func login(email: String, password: String, callback: @escaping (DataResponse<Any>) -> Void) {
         callBody(api: "login", parameters: ["email":email, "password":password], callback: callback)
     }
     
     func register(email: String, password: String, callback: @escaping (DataResponse<Any>) -> Void) {
         callBody(api: "register", parameters: ["email":email, "password":password], callback: callback)
+    }
+    
+    func logout(callback: @escaping (DataResponse<Any>) -> Void) {
+        callNoBody(api: "logout", callback: callback)
+    }
+    
+    func activityList(callback: @escaping (DataResponse<Any>) -> Void) {
+        callNoBody(api: "activityList", callback: callback)
     }
 }

@@ -30,12 +30,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginUser(_ sender: Any) {
         let h = DataHandler()
-        h.login(email: emailField.text!, password: passwordField.text!, callback: {response in
-//            let cookie = response.response?.allHeaderFields as! [String: String]
-//            let url = response.request?.url
-//            let cookies = HTTPCookie.cookies(withResponseHeaderFields: cookie, for: url)
+        h.login(email: "email@email.com", password: "password", callback: {response in
+            let cookie = response.response?.allHeaderFields as! [String: String]
+            let url = response.request?.url
+            let cookies = HTTPCookie.cookies(withResponseHeaderFields: cookie, for: url!)
             let j = JSON(response.data)
-            
+            h.activityList(callback: {response1 in
+                let m = JSON(response1.data)
+                print(m)
+            })
         })
     }
 
