@@ -14,8 +14,8 @@ class DataHandler {
     let session = URLSession.shared
     let host = "192.168.200.247"
     
-    let paths = ["login": "/api/user/login", "register": "/api/user/register", "logout": "/api/user/logout", "activityList": "/api/activity"]
-    let methods : [String : HTTPMethod] = ["login": .post, "register": .post, "logout": .get, "activityList": .get]
+    let paths = ["login": "/api/user/login", "register": "/api/user/register", "logout": "/api/user/logout", "activityList": "/api/activity", "user": "/api/user"]
+    let methods : [String : HTTPMethod] = ["login": .post, "register": .post, "logout": .get, "activityList": .get, "user": .get]
     
     func callBody(api: String, parameters: Parameters, callback: @escaping (DataResponse<Any>) -> Void) {
         var url = URLComponents()
@@ -49,5 +49,9 @@ class DataHandler {
     
     func activityList(callback: @escaping (DataResponse<Any>) -> Void) {
         callNoBody(api: "activityList", callback: callback)
+    }
+    
+    func user(callback: @escaping (DataResponse<Any>) -> Void) {
+        callNoBody(api: "user", callback: callback)
     }
 }

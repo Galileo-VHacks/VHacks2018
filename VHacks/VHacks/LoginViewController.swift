@@ -19,7 +19,13 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        DataHandler().user {response in
+            if let res = response.response {
+                if res.statusCode == 200 {
+                    self.performSelector(onMainThread: #selector(self.segue), with: nil, waitUntilDone: true)
+                }
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -30,16 +36,20 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginUser(_ sender: Any) {
         let h = DataHandler()
-        h.login(email: "email@email.com", password: "password", callback: {response in
-            let cookie = response.response?.allHeaderFields as! [String: String]
-            let url = response.request?.url
-            let cookies = HTTPCookie.cookies(withResponseHeaderFields: cookie, for: url!)
-            let j = JSON(response.data)
-            h.activityList(callback: {response1 in
-                let m = JSON(response1.data)
-                print(m)
-            })
+        h.login(email: emailField.text!, password: passwordField.text!, callback: {response in
+            if let code = response.response?.statusCode {
+                if code == 200 {
+                    let cookie = response.response?.allHeaderFields as! [String: String]
+                    let url = response.request?.url
+                    let cookies = HTTPCookie.cookies(withResponseHeaderFields: cookie, for: url!)
+                    self.performSelector(onMainThread: #selector(self.segue), with: nil, waitUntilDone: true)
+                }
+            }
         })
+    }
+    
+    func segue() {
+        performSegue(withIdentifier: "login", sender: nil)
     }
 
     /*

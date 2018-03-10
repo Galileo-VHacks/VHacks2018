@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class UserMenuViewController: UIViewController {
 
@@ -15,9 +16,25 @@ class UserMenuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var balanceLabel: UILabel!
+    var balance: Int?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        DataHandler().user {response in
+            let json = JSON(response.data)
+            if let d = json["data"].dictionary {
+                self.balance = d["balance"]?.int
+            }
+            self.performSelector(onMainThread: #selector(self.updateUI), with: nil, waitUntilDone: true)
+        }
+    }
+    
+    func updateUI() {
+        if let b = balance {
+            balanceLabel.text = "\(b)"
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
