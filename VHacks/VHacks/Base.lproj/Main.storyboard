@@ -204,6 +204,9 @@
                             <constraint firstItem="KC5-iN-zwS" firstAttribute="leading" secondItem="sIs-sk-uj4" secondAttribute="trailing" constant="45" id="xdW-7s-PgX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="Gi8-K8-RUe" id="hcx-Sf-7NC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grb-x1-gEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

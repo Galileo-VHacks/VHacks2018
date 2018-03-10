@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class IntecoinViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    var balance: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        DataHandler().user {response in
+            let json = JSON(response.data)
+            if let d = json["data"].dictionary {
+                self.balance = d["balance"]?.int
+            }
+            self.performSelector(onMainThread: #selector(self.updateUI), with: nil, waitUntilDone: true)
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    func updateUI() {
+        if let b = balance {
+            label.text = "\(b) ITC"
+        }
     }
 
     override func didReceiveMemoryWarning() {

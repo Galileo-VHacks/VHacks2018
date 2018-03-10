@@ -19,6 +19,11 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         DataHandler().user {response in
             if let res = response.response {
                 if res.statusCode == 200 {
@@ -26,7 +31,6 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
