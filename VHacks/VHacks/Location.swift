@@ -17,6 +17,9 @@ class Location {
     var cost: String?
     var checkins: [User]
     var ref: String?
+    var phone: String?
+    var email: String?
+    var website: String?
     
     init(location: CLLocationCoordinate2D, title: String, type: String) {
         self.location = location
